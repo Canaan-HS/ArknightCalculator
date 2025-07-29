@@ -81,15 +81,15 @@ function MainContent() {
       const subProfessionIdJsonData = await subProfessionIdResponse.json();
       //幹員數據 
       const characterResponse = await fetch(`${process.env.PUBLIC_URL}/json/character_table.json`);
-      const characterJsonData = await characterResponse.json();console.log('全幹員數據',characterJsonData);
+      const characterJsonData = await characterResponse.json();//console.log('全幹員數據',characterJsonData);
 
       //幹員模組資訊
       const uniequipResponse = await fetch(`${process.env.PUBLIC_URL}/json/uniequip_table.json`);
-      const uniequipJsonData = await uniequipResponse.json();console.log('全幹員模組資訊',uniequipJsonData);
+      const uniequipJsonData = await uniequipResponse.json();//console.log('全幹員模組資訊',uniequipJsonData);
 
       //幹員模組數據
       const battleEquipResponse = await fetch(`${process.env.PUBLIC_URL}/json/battle_equip_table.json`);
-      const battleEquipJsonData = await battleEquipResponse.json();console.log('全幹員模組數據',battleEquipJsonData);
+      const battleEquipJsonData = await battleEquipResponse.json();//console.log('全幹員模組數據',battleEquipJsonData);
 
       //編輯JSON用參考代碼
       // const abcResponse = await fetch(`${process.env.PUBLIC_URL}/json/技能數據簡化版.json`);
@@ -498,6 +498,7 @@ function MainContent() {
               <small className={ candidates ? candidatesStyle : 'd-none' }>速射手Y模(數據有問題):<br/> 攻擊範圍有地面敵人時提升攻擊速度</small>
               <small className={ candidates ? candidatesStyle : 'd-none' }>神射手X模(數據有問題):<br/> 攻擊距離越遠的人造成越高傷害</small>
               <small className={ candidates ? candidatesStyle : 'd-none' }>攻城手X模(數據有問題):<br/> 攻擊重量&gt;3的敵人時提升攻擊倍率</small> 
+              <small className={ candidates ? candidatesStyle : 'd-none' }>攻城手Y模(數據有問題):<br/> 攻擊距離越遠的人造成越高傷害</small>
               <small className={ candidates ? candidatesStyle : 'd-none' }>炮手X模:<br/> 攻擊阻擋的敵人時提升攻擊倍率</small> 
               <small className={ candidatesStyle }>炮手Y模:<br/> 無視防禦</small>  
               <small className={ candidatesStyle }>散射手X模:<br/> 攻擊前方一橫排的敵人時提升更高攻擊倍率</small> 
